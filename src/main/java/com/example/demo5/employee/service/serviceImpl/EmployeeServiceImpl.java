@@ -26,16 +26,16 @@ public class EmployeeServiceImpl implements EmployeeService {
         this.employeeRepository = employeeRepository;
     }
 
-    @Override
-    public List<EmployeeResponse> getAllEmployee() {
-        log.info(" === Start API get all === ");
-        log.info("Getting all employees...");
-        List<EmployeeEntity> employees = employeeRepository.findAll();
-        List<EmployeeResponse> response = convertEntitiesToResponses(employees);
-        log.info("Total employees found: {}", response.size());
-        log.info(" === Finish API create new user, User id: {} ===", response);
-        return response;
-    }
+//    @Override
+//    public List<EmployeeResponse> getAllEmployee() {
+//        log.info(" === Start API get all === ");
+//        log.info("Getting all employees...");
+//        List<EmployeeEntity> employees = employeeRepository.findAll();
+//        List<EmployeeResponse> response = convertEntitiesToResponses(employees);
+//        log.info("Total employees found: {}", response.size());
+//        log.info(" === Finish API create new user, User id: {} ===", response);
+//        return response;
+//    }
 
     private List<EmployeeResponse> convertEntitiesToResponses(List<EmployeeEntity> employees) {
         return employees.stream()
