@@ -7,7 +7,11 @@ import java.util.List;
 
 public interface EmployeeService {
     List<EmployeeResponse> getAllEmployee();
-    EmployeeResponse getEmployeeById(String id);
+
+    EmployeeResponse getEmployeeById(long id);
 
     EmployeeResponse create(EmployeeRequest request);
+
+    void delete(long id);
+
 }
